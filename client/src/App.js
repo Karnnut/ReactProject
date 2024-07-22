@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
+import Home from "./components/Home.js";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
   const [state, setState] = useState(null);
 
@@ -13,17 +14,17 @@ const App = () => {
         },
         (error) => {
           console.warn("Frontend failed to connect to backend:", error);
-        }
+        },
       );
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Welcome to the App!</h1>
-        <p>{state}</p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/other-page" component={OtherPage} />
+      </Switch>
+    </Router>
   );
 };
 
