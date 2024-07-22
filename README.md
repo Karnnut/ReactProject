@@ -28,13 +28,13 @@ A template for setting up a React frontend and a Node-Express backend in docker 
 1. Clone the project source code.
 
 ```
-git clone https://github.com/AVu120/react-and-node-express-on-docker.git
+git clone https://github.com/AVu120/ReactProject.git
 ```
 
 2. Navigate into the project directory.
 
 ```
-cd react-and-node-express-on-docker
+cd ReactProject
 ```
 
 3. Run this single command to build the react-frontend (client) & node-express-backend (server) docker images, run them as containers, and have them connect to each other.
